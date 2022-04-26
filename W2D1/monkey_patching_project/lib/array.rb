@@ -61,4 +61,25 @@ class Array
         return idx[0]
     end
   end
+
+  def my_uniq
+    arr = []
+    self.each do |el|
+        if !arr.include?(el)
+            arr << el
+        end
+    end
+    arr
+  end
+  def my_transpose
+    result = []
+    (0...self.length).each do |i|
+        arr = []
+        self.each do |sarr|
+            arr << sarr[i]
+        end
+        result << arr
+    end
+    result
+  end
 end
