@@ -7,5 +7,34 @@ class Array
         mapped
     end
 
-    
+    def self.my_select(&prc)
+        selected = []
+        if self.my_each { |el| prc.call(el)}
+            selected << el
+        end
+        selected
+    end
+
+    def self.my_reject(&prc)
+        not_rejected = []
+        if !self.my_each { |el| prc.call(el)}
+            not_rejected << el
+        end
+        not_rejected
+    end
+
+    def self.my_any?(&prc)
+        if self.my_each { |el| prc.call(el) }
+            return true
+        end
+        false
+    end
+    def self.my_all?(&prc)
+        if self.my_each { |el| prc.call(el) }
+            return false
+        end
+        true
+    end
+
+
 end
