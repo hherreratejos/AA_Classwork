@@ -1,0 +1,11 @@
+class Array
+
+    def self.my_each(&prc)
+        mapped = self.map do |ele|
+            prc.call(ele)
+        end
+        mapped
+    end
+
+    
+end
