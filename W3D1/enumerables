@@ -43,7 +43,7 @@ class Array
         flatten = []
         self.my_each do |ele|
             if ele.is_a? Array
-                ele.my_flatten
+                flatten += ele.my_flatten
             else
                 flatten << ele
             end
@@ -51,7 +51,16 @@ class Array
         flatten
     end
 
+    def my_zip (*arrs)
+        (0...self.length).map do |i|
+            arrs.map {|subarr| [self[i]] += [subarr[i]]}
+        end
+    end
+
 end
 
 
-p [1, 2, 3, [4, [5, 6]], [[[7]], 8]].my_flatten
+a = [ 4, 5, 6 ]
+b = [ 7, 8, 9 ]
+p [1, 2, 3].my_zip(a, b)
+# [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
