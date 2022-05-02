@@ -98,3 +98,5 @@ class Hangman
       end
     end
 end
+
+
