@@ -1,40 +1,57 @@
 class Array
 
-    def self.my_each(&prc)
-        mapped = self.map do |ele|
-            prc.call(ele)
+    def my_each(&prc)
+        i = 0
+        while i < self.length
+            prc.call(self[i])
+            i += 1
         end
-        mapped
+        self
     end
 
-    def self.my_select(&prc)
+    def my_select(&prc)
         selected = []
-        if self.my_each { |el| prc.call(el)}
-            selected << el
+        self.my_each do |ele|
+            selected << ele if prc.call(ele)           
         end
         selected
     end
 
-    def self.my_reject(&prc)
+    def my_reject(&prc)
         not_rejected = []
-        if !self.my_each { |el| prc.call(el)}
-            not_rejected << el
+        self.my_each do |ele|
+            not_rejected << ele if !prc.call(ele)
         end
         not_rejected
     end
 
-    def self.my_any?(&prc)
-        if self.my_each { |el| prc.call(el) }
-            return true
+    def my_any?(&prc)
+        self.my_each do |ele|
+            return true if prc.call(ele)
         end
         false
     end
-    def self.my_all?(&prc)
-        if self.my_each { |el| prc.call(el) }
-            return false
+
+    def my_all?(&prc)
+        self.my_each do |ele|
+            return false if !prc.call(ele)
         end
         true
     end
 
+    def my_flatten
+        flatten = []
+        self.my_each do |ele|
+            if ele.is_a? Array
+                ele.my_flatten
+            else
+                flatten << ele
+            end
+        end
+        flatten
+    end
 
 end
+
+
+p [1, 2, 3, [4, [5, 6]], [[[7]], 8]].my_flatten
