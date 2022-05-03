@@ -40,9 +40,6 @@ class Array
     end
 
     def my_flatten
-<<<<<<< HEAD
-        
-=======
         flatten = []
         self.my_each do |ele|
             if ele.is_a? Array
@@ -52,7 +49,6 @@ class Array
             end
         end
         flatten
->>>>>>> c8230d69d561902a706003afe2de7c31f2c80970
     end
 
     def my_zip (*arrs)
