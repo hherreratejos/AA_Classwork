@@ -1,1 +1,29 @@
 /* PHASE 2: Notifications */
+
+.w3-badge{
+  display: flex;
+  background-color: black;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#koool-id{
+  display: inline-block;
+  position: relative;
+}
+
+
+
+.nested-list {
+ color: rgb(101, 211, 101);
+ display: none;
+ position: relative;
+}
+
+.nested-list:hover{
+  display: inline-block;
+  position: relative;
+}

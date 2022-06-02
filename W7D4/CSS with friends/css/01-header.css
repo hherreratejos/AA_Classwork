@@ -34,15 +34,20 @@ body {
     padding-left: auto;
     padding-right: auto;
     border-left: 1px solid white;
+    justify-content: space-between;
 }
 
 .header-list > li:hover {
     background-color: black;
 }
 
+.header-logo:hover {
+  background-color: black;
+}
+
 .header-list > li > a {
     text-decoration: none;
     color: white;
-    display: inline-block;
+    display: flex;
     padding: 20px;
 }
