@@ -1,2 +1,48 @@
 /* PHASE 1: Header */
+body {
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0px;
+}
 
+.header {
+    background-color: red;
+}
+
+.header-logo > a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-list > li {
+    display: flex;
+    padding-left: auto;
+    padding-right: auto;
+    border-left: 1px solid white;
+}
+
+.header-list > li:hover {
+    background-color: black;
+}
+
+.header-list > li > a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 20px;
+}
