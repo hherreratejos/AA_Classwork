@@ -26,15 +26,9 @@ button {
 	text-align: center;
 }
 
-button:hover {
-	background-color: $darkest-blue;
-	border-color: $darkest-blue;
-}
 
-.left-nav > ul li:hover {
-    background-color: $lightest-gray;
-    cursor: pointer;
-}
+
+
 
 /*
 	Header Rules
@@ -56,23 +50,8 @@ hr {
 	margin-bottom: 1px;
 }
 
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
-}
 
-.left-nav ul {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 10px;
-}
 
-.left-nav ul li {
-    display: block;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-family: $sans-serif;
-    font-size: 11px;
-    text-transform: uppercase;
-}
+
+
+

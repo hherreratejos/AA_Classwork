@@ -15,6 +15,8 @@
 	border-bottom: none;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
+	display: flex;
+	flex-direction: row;
 
 	a {
 		margin: 0 5px;
@@ -24,10 +26,23 @@
 		color: $dark-gray;
 	}
 
-	ul {
-		display: flex;
+	a:hover{
+		background-color: $lightest-gray;
+		cursor: pointer;
+	}
+
+	li:first-child{
+		font-weight: bold;
 	}
 }
+
+#logo {
+	width: 370px;	
+}
+// .languages{
+// 	display: flex;
+
+// }
 
 .logo {
 	max-width: 400px;
@@ -43,7 +58,6 @@
 
 	li {
 		margin-left: 10px;
-		border-right: 1px solid $light-gray;
 	}
 
 	button {
@@ -71,4 +85,27 @@
 	strong {
 		color: green;
 	}
+}
+
+.masthead div{
+	display: flex;
+}
+
+.masthead div a{
+	padding-left: 5px;
+	padding-right: 5px;
+	border-left: 2px solid $lightest-gray;
+}
+
+.masthead div p {
+	padding-right: 5px ;
+}
+
+.masthead div a:hover{
+	text-decoration: underline;
+}
+
+.masthead i{
+	margin-bottom: 3px;
+	margin-right: 5px;
 }
