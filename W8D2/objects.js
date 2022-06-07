@@ -121,4 +121,4 @@
 // Questions for debugging
 // 1.Have I declared variables propery?
 // 2. Do I have acces to variables in a particular scope?
-// 3. What
+// 3.
