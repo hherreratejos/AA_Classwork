@@ -13,11 +13,13 @@ class Game extends React.Component{
   }
 
   updateGame(tile,explored){
+    // console.log('it kinda worked')
        if(explored){
          tile.toggleFlag()
        }else{
           tile.explore()
        }
+       this.setState({board: this.state.board})
   }
   
   render(){

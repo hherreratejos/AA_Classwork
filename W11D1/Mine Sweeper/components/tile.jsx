@@ -13,10 +13,12 @@ class Tile extends React.Component{
      let explored;
 
     if (e.altKey){
+      // console.log('it kinda worked')
          explored = true
           
     }else{
        explored = false
+       
     }
     this.props.updateGame(this.props.tile, explored)
   }
@@ -32,11 +34,12 @@ class Tile extends React.Component{
 
     if(this.props.tile.flagged){
       buttonType = 'flagged';
-      text = '&#128681;';
+      text = '🚩';
+      console.log(text,"text")
     }else if(this.props.tile.explored){
       if (this.props.tile.bombed){
         buttonType = 'bombed';
-        text = '&#128163;';
+        text = '💣';
       }else {
         buttonType = 'explored';
         count = this.props.tile.adjacentBombCount();
